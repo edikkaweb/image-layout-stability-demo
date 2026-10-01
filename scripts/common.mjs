@@ -1,0 +1,6 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
+export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+export const read=f=>fs.readFileSync(path.join(root,f),'utf8');export const json=f=>JSON.parse(read(f));export const hash=b=>crypto.createHash('sha256').update(b).digest('hex');
+export const influencingFiles=['experiments/a.html','experiments/b.html','experiments/scene.css','experiments/observer.js','experiments/protocol.json','assets/edikka-image.jpg','assets/provenance.json','vendor/web-vitals-6.2.2.js','scripts/common.mjs','scripts/server.mjs','scripts/measure.mjs','scripts/zip.mjs','docs/PROTOCOL.md','package.json','package-lock.json'];
+export function revision(){const files=Object.fromEntries(influencingFiles.map(f=>[f,hash(fs.readFileSync(path.join(root,f)))]));return {algorithm:'SHA-256 over JSON.stringify of the ordered file/hash map',hash:hash(JSON.stringify(files)),files};}
+export function sessionCLS(entries){let max=0,value=0,first=0,last=0;for(const e of [...entries].sort((a,b)=>a.startTime-b.startTime)){if(e.hadRecentInput)continue;if(value&&e.startTime-last<1000&&e.startTime-first<5000)value+=e.value;else{value=e.value;first=e.startTime;}last=e.startTime;max=Math.max(max,value);}return max;}
