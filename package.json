@@ -1,0 +1,24 @@
+{
+  "name": "image-layout-stability-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node scripts/server.mjs --presentation",
+    "lab": "node scripts/server.mjs --lab",
+    "measure": "node scripts/measure.mjs",
+    "results": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs",
+    "test": "node --test tests/data.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "prepare:publish": "npm run verify && npm run build && npm test"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0",
+    "axe-core": "4.10.3"
+  }
+}
