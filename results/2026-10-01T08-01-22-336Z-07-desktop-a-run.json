@@ -1,0 +1,320 @@
+{
+  "schema": "edikka-image-layout-run-v1",
+  "id": "2026-10-01T08-01-22-336Z-07-desktop-a",
+  "series": "2026-10-01T08-01-22-336Z",
+  "startedAt": "2026-10-01T08:01:59.832Z",
+  "variant": "a",
+  "repetition": 1,
+  "order": 7,
+  "environment": "local-delayed-image-response",
+  "testedURL": "http://127.0.0.1:4182/image-layout-stability-demo/experiments/a.html?run=2026-10-01T08-01-22-336Z-07-desktop-a",
+  "revision": {
+    "algorithm": "SHA-256 over JSON.stringify of the ordered file/hash map",
+    "hash": "dd024d945e42b7bd0cadc5321e88104f3d1ea10c3d6eb82cefe1325c51bcf548",
+    "files": {
+      "experiments/a.html": "5714c6d0338a2c4367fd42058c61f879fdec691f26cca31a7f2105bc64e99890",
+      "experiments/b.html": "74d04af94f14a1e052c15f129420f13e8f139b72ad560cfe6508815f07ed364d",
+      "experiments/scene.css": "14e7aa16af3b5bd9909ce3f6e37a7f4aa613519752636791a85d744776d9e7c9",
+      "experiments/observer.js": "7d41c933b93c304886dcc89254158e1db5509e0fab7c3d6caa49458bd6da5961",
+      "experiments/protocol.json": "4c5889e7e80be61e164daf89569d09fa26200f7eb89507fc53fda94b0027cc1f",
+      "assets/edikka-image.jpg": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+      "assets/provenance.json": "0c5ec22cd6d34f9939651f0411090c6547900fa02e6c715830ccf5839d05c6b6",
+      "vendor/web-vitals-6.2.2.js": "bdf421fcbd62c2572c8b09096572262496e2bc54289bcae80c9fe94f6ca6769d",
+      "scripts/common.mjs": "0f5400fe91ea7fb161376383a25e31933487216d16726e02c70705115c660f04",
+      "scripts/server.mjs": "e55555eb5e8a64101e47d7ac6ae10a51a8ddd9d74722eaeb216ac2ddda295047",
+      "scripts/measure.mjs": "a0a0dcdff67bd60f55be40b370b5de0c13f44220df5a0e0aa93d0c2416c32c03",
+      "scripts/zip.mjs": "7d86c6bc6c59440b8cd30e41b33651ab7d229e5706bc35d65a31793598389d03",
+      "docs/PROTOCOL.md": "4846004e7ff4d71857b203b4eedcd381d3e9cf49bf9e84da802eaa505fa78a02",
+      "package.json": "44699821a17c38898c1700025fb3c169e510326a75ee9364339d7a7521ff851c",
+      "package-lock.json": "a38dae9f7fbe1afc5cb41a6653d87d66f55e6c5f65722e111512bf793dd7cdf1"
+    }
+  },
+  "sourceArchive": "2026-10-01T08-01-22-336Z-sources.zip",
+  "tools": {
+    "node": "v22.12.0",
+    "playwright": "1.63.0",
+    "webVitals": "6.2.2",
+    "browser": "154.0.8037.59",
+    "channel": "chrome",
+    "headless": true
+  },
+  "system": {
+    "platform": "darwin",
+    "release": "25.3.0",
+    "architecture": "arm64"
+  },
+  "viewport": {
+    "name": "desktop",
+    "width": 1440,
+    "height": 900,
+    "dpr": 1
+  },
+  "image": {
+    "file": "assets/edikka-image.jpg",
+    "source": "https://www.edikka.com/docbd/article/big/optimisation-images-web-reference-edikka-v2-600.jpg",
+    "article": "https://www.edikka.com/insights/developpement-web/optimisation-images-web",
+    "retrieved_at": "2026-10-01T07:57:14.751260+00:00",
+    "width": 1200,
+    "height": 800,
+    "bytes": 152231,
+    "sha256": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+    "rights": "© Edikka. Reuse in this Edikka demonstration authorised by the project brief of 2026-10-01. Image excluded from the MIT code licence; no broader open image licence is asserted.",
+    "note": "The source URL contains 600, but the retrieved JPEG decodes to 1200 × 800. Original bytes retained."
+  },
+  "conditions": {
+    "cache": "New isolated browser context, service workers blocked, Chromium cache disabled through CDP, local server Cache-Control:no-store",
+    "imageDelayMs": 2000,
+    "windowMs": 6000,
+    "server": {
+      "mode": "lab",
+      "delayMs": 2000,
+      "cache": "no-store",
+      "imageSha256": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+      "protocol": "1.0.0"
+    }
+  },
+  "status": "valid",
+  "errors": [],
+  "screenshots": {
+    "before": "2026-10-01T08-01-22-336Z-07-desktop-a-before.png",
+    "after": "2026-10-01T08-01-22-336Z-07-desktop-a-after.png"
+  },
+  "httpStatus": 200,
+  "actualURL": "http://127.0.0.1:4182/image-layout-stability-demo/experiments/a.html?run=2026-10-01T08-01-22-336Z-07-desktop-a",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+  "observation": {
+    "supported": true,
+    "window": {
+      "startMs": 0,
+      "endMs": 6000,
+      "sampledAt": 5999.799999952316
+    },
+    "before": {
+      "at": 32.799999952316284,
+      "marker": {
+        "x": 480,
+        "y": 150.5,
+        "width": 480,
+        "height": 42.5,
+        "top": 150.5,
+        "bottom": 193
+      },
+      "image": {
+        "x": 480,
+        "y": 69.5,
+        "width": 480,
+        "height": 0,
+        "top": 69.5,
+        "bottom": 69.5
+      },
+      "imageComplete": false,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "visibility": "visible",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "styles": {
+        "width": "480px",
+        "height": "0px",
+        "aspectRatio": "auto",
+        "minHeight": "0px",
+        "objectFit": "fill"
+      },
+      "dimensions": {
+        "width": null,
+        "height": null
+      }
+    },
+    "after": {
+      "at": 5999.799999952316,
+      "marker": {
+        "x": 480,
+        "y": 470.5,
+        "width": 480,
+        "height": 42.5,
+        "top": 470.5,
+        "bottom": 513
+      },
+      "image": {
+        "x": 480,
+        "y": 69.5,
+        "width": 480,
+        "height": 320,
+        "top": 69.5,
+        "bottom": 389.5
+      },
+      "imageComplete": true,
+      "naturalWidth": 1200,
+      "naturalHeight": 800,
+      "visibility": "visible",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "dpr": 1
+      },
+      "styles": {
+        "width": "480px",
+        "height": "320px",
+        "aspectRatio": "auto",
+        "minHeight": "0px",
+        "objectFit": "fill"
+      },
+      "dimensions": {
+        "width": null,
+        "height": null
+      }
+    },
+    "loadedAt": 2005.8999999761581,
+    "loadError": null,
+    "events": [
+      {
+        "startTime": 2014.699999988079,
+        "value": 0.014320987654320987,
+        "hadRecentInput": false,
+        "lastInputTime": 0,
+        "sources": [
+          {
+            "node": "p",
+            "previousRect": {
+              "x": 480,
+              "y": 87.5,
+              "width": 480,
+              "height": 45,
+              "top": 87.5,
+              "right": 960,
+              "bottom": 132.5,
+              "left": 480
+            },
+            "currentRect": {
+              "x": 480,
+              "y": 407.5,
+              "width": 480,
+              "height": 45,
+              "top": 407.5,
+              "right": 960,
+              "bottom": 452.5,
+              "left": 480
+            }
+          },
+          {
+            "node": "#marker",
+            "previousRect": {
+              "x": 480,
+              "y": 150.5,
+              "width": 480,
+              "height": 42.5,
+              "top": 150.5,
+              "right": 960,
+              "bottom": 193,
+              "left": 480
+            },
+            "currentRect": {
+              "x": 480,
+              "y": 470.5,
+              "width": 480,
+              "height": 42.5,
+              "top": 470.5,
+              "right": 960,
+              "bottom": 513,
+              "left": 480
+            }
+          }
+        ]
+      }
+    ],
+    "metricReports": [
+      {
+        "at": 49.09999996423721,
+        "value": 0,
+        "id": "v6-1790841719988-2261294591602",
+        "navigationType": "navigate",
+        "entries": []
+      },
+      {
+        "at": 2015.2999999523163,
+        "value": 0.014320987654320987,
+        "id": "v6-1790841719988-2261294591602",
+        "navigationType": "navigate",
+        "entries": [
+          2014.699999988079
+        ]
+      }
+    ],
+    "cls": 0.014320987654320987,
+    "metricStatus": "observed",
+    "visibility": [
+      {
+        "at": 0,
+        "state": "visible"
+      }
+    ],
+    "interruptions": [],
+    "markerDisplacement": 320
+  },
+  "requests": [
+    "http://127.0.0.1:4182/image-layout-stability-demo/experiments/a.html?run=2026-10-01T08-01-22-336Z-07-desktop-a",
+    "http://127.0.0.1:4182/image-layout-stability-demo/experiments/scene.css",
+    "http://127.0.0.1:4182/image-layout-stability-demo/experiments/observer.js",
+    "http://127.0.0.1:4182/image-layout-stability-demo/assets/edikka-image.jpg",
+    "http://127.0.0.1:4182/image-layout-stability-demo/vendor/web-vitals-6.2.2.js"
+  ],
+  "resourceTiming": [
+    {
+      "name": "http://127.0.0.1:4182/image-layout-stability-demo/assets/edikka-image.jpg",
+      "entryType": "resource",
+      "startTime": 3.099999964237213,
+      "duration": 2002.300000011921,
+      "navigationId": 2953,
+      "initiatorType": "img",
+      "deliveryType": "",
+      "nextHopProtocol": "http/1.1",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "image/jpeg",
+      "contentEncoding": "",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 3.099999964237213,
+      "domainLookupStart": 3.399999976158142,
+      "domainLookupEnd": 3.399999976158142,
+      "connectStart": 3.399999976158142,
+      "secureConnectionStart": 0,
+      "connectEnd": 3.5,
+      "requestStart": 3.5,
+      "responseStart": 2005.199999988079,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 2005.199999988079,
+      "responseEnd": 2005.3999999761581,
+      "transferSize": 152531,
+      "encodedBodySize": 152231,
+      "decodedBodySize": 152231,
+      "responseStatus": 200,
+      "serverTiming": []
+    }
+  ],
+  "imageResponse": {
+    "status": 200,
+    "sha256": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+    "bytes": 152231,
+    "headers": {
+      "cache-control": "no-store",
+      "connection": "keep-alive",
+      "content-length": "152231",
+      "content-type": "image/jpeg",
+      "date": "Thu, 01 Oct 2026 08:02:01 GMT",
+      "keep-alive": "timeout=5",
+      "x-content-type-options": "nosniff",
+      "x-experiment-delay-ms": "2000",
+      "x-image-sha256": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0"
+    }
+  },
+  "validityIssues": [],
+  "endedAt": "2026-10-01T08:02:06.009Z"
+}

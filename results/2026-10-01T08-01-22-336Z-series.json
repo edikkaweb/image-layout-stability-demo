@@ -1,0 +1,45 @@
+{
+  "schema": "edikka-image-layout-series-v1",
+  "id": "2026-10-01T08-01-22-336Z",
+  "startedAt": "2026-10-01T08:01:22.347Z",
+  "protocolWrittenAt": "2026-10-01T07:57:14.752794+00:00",
+  "revision": {
+    "algorithm": "SHA-256 over JSON.stringify of the ordered file/hash map",
+    "hash": "dd024d945e42b7bd0cadc5321e88104f3d1ea10c3d6eb82cefe1325c51bcf548",
+    "files": {
+      "experiments/a.html": "5714c6d0338a2c4367fd42058c61f879fdec691f26cca31a7f2105bc64e99890",
+      "experiments/b.html": "74d04af94f14a1e052c15f129420f13e8f139b72ad560cfe6508815f07ed364d",
+      "experiments/scene.css": "14e7aa16af3b5bd9909ce3f6e37a7f4aa613519752636791a85d744776d9e7c9",
+      "experiments/observer.js": "7d41c933b93c304886dcc89254158e1db5509e0fab7c3d6caa49458bd6da5961",
+      "experiments/protocol.json": "4c5889e7e80be61e164daf89569d09fa26200f7eb89507fc53fda94b0027cc1f",
+      "assets/edikka-image.jpg": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+      "assets/provenance.json": "0c5ec22cd6d34f9939651f0411090c6547900fa02e6c715830ccf5839d05c6b6",
+      "vendor/web-vitals-6.2.2.js": "bdf421fcbd62c2572c8b09096572262496e2bc54289bcae80c9fe94f6ca6769d",
+      "scripts/common.mjs": "0f5400fe91ea7fb161376383a25e31933487216d16726e02c70705115c660f04",
+      "scripts/server.mjs": "e55555eb5e8a64101e47d7ac6ae10a51a8ddd9d74722eaeb216ac2ddda295047",
+      "scripts/measure.mjs": "a0a0dcdff67bd60f55be40b370b5de0c13f44220df5a0e0aa93d0c2416c32c03",
+      "scripts/zip.mjs": "7d86c6bc6c59440b8cd30e41b33651ab7d229e5706bc35d65a31793598389d03",
+      "docs/PROTOCOL.md": "4846004e7ff4d71857b203b4eedcd381d3e9cf49bf9e84da802eaa505fa78a02",
+      "package.json": "44699821a17c38898c1700025fb3c169e510326a75ee9364339d7a7521ff851c",
+      "package-lock.json": "a38dae9f7fbe1afc5cb41a6653d87d66f55e6c5f65722e111512bf793dd7cdf1"
+    }
+  },
+  "sourceArchive": "2026-10-01T08-01-22-336Z-sources.zip",
+  "plannedTrials": 12,
+  "runs": [
+    "2026-10-01T08-01-22-336Z-01-mobile-a-run.json",
+    "2026-10-01T08-01-22-336Z-02-mobile-b-run.json",
+    "2026-10-01T08-01-22-336Z-03-mobile-b-run.json",
+    "2026-10-01T08-01-22-336Z-04-mobile-a-run.json",
+    "2026-10-01T08-01-22-336Z-05-mobile-a-run.json",
+    "2026-10-01T08-01-22-336Z-06-mobile-b-run.json",
+    "2026-10-01T08-01-22-336Z-07-desktop-a-run.json",
+    "2026-10-01T08-01-22-336Z-08-desktop-b-run.json",
+    "2026-10-01T08-01-22-336Z-09-desktop-b-run.json",
+    "2026-10-01T08-01-22-336Z-10-desktop-a-run.json",
+    "2026-10-01T08-01-22-336Z-11-desktop-a-run.json",
+    "2026-10-01T08-01-22-336Z-12-desktop-b-run.json"
+  ],
+  "status": "completed",
+  "endedAt": "2026-10-01T08:02:36.949Z"
+}
