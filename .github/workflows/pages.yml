@@ -23,7 +23,7 @@ jobs:
       - run: npm run verify
       - run: npm run build
       - run: npm test
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5.0.0
         with:
           path: dist
           include-hidden-files: true
@@ -39,4 +39,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5.0.1
