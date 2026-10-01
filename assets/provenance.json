@@ -1,0 +1,82 @@
+{
+  "image": {
+    "file": "assets/edikka-image.jpg",
+    "source": "https://www.edikka.com/docbd/article/big/optimisation-images-web-reference-edikka-v2-600.jpg",
+    "article": "https://www.edikka.com/insights/developpement-web/optimisation-images-web",
+    "retrieved_at": "2026-10-01T07:57:14.751260+00:00",
+    "width": 1200,
+    "height": 800,
+    "bytes": 152231,
+    "sha256": "a49cd40263382ada9b272c2194bef4114722626d8a47f454f7398f35cf16cee0",
+    "rights": "© Edikka. Reuse in this Edikka demonstration authorised by the project brief of 2026-10-01. Image excluded from the MIT code licence; no broader open image licence is asserted.",
+    "note": "The source URL contains 600, but the retrieved JPEG decodes to 1200 × 800. Original bytes retained."
+  },
+  "web_vitals": {
+    "version": "6.2.2",
+    "url": "https://registry.npmjs.org/web-vitals/-/web-vitals-6.2.2.tgz",
+    "npm_integrity": "sha512-oto5x6dLEgrRqfcWed+pZEUb2q6ikbFmqF54CRDhI/QGbn+qxC49b4C4OkbH+kb9C3a8shpFD3SgR9kRcs80ZQ==",
+    "license": "Apache-2.0",
+    "files": {
+      "vendor/LICENSE-web-vitals.txt": "bfdeded4040e05da31ca9b6239dc83bd23fa26ac8db87342a7ca4363f68916ff",
+      "vendor/onCLS-6.2.2.ts": "16634bcd3f0c478917e56f8833c8cc8edccc98eca6fe9797bb9a8abeb8b939b5",
+      "vendor/web-vitals-6.2.2.js": "bdf421fcbd62c2572c8b09096572262496e2bc54289bcae80c9fe94f6ca6769d",
+      "vendor/LayoutShiftManager-6.2.2.ts": "afc1a53d7b01cb9a403299881d0021f5cc1821fcb15f2de13ad4a0d1a544a1d7"
+    }
+  },
+  "instrument": {
+    "version": "1.1",
+    "fr": "https://www.edikka.com/docbd/data/grille-audit-images-web-edikka-v1-1.json",
+    "en": "https://www.edikka.com/docbd/data/web-image-audit-grid-edikka-v1-1.json",
+    "controls": {
+      "fr": [
+        {
+          "id": "IMG22",
+          "domain_code": "STABILITE",
+          "domain": "Dimensions et stabilité",
+          "question": "Width et height décrivent-ils le ratio intrinsèque du candidat ou du fallback de référence ?",
+          "method": "Comparer attributs, dimensions décodées et ratio rendu.",
+          "expected_evidence": "Dimensions HTML, naturelles et ratio calculé.",
+          "access": "Public",
+          "severity": "Majeur",
+          "automation": "Oui"
+        },
+        {
+          "id": "IMG23",
+          "domain_code": "STABILITE",
+          "domain": "Dimensions et stabilité",
+          "question": "L’espace est-il réservé avant le téléchargement sur tous les breakpoints ?",
+          "method": "Désactiver le cache, ralentir le réseau et observer la boîte avant décodage.",
+          "expected_evidence": "Capture avant chargement et CLS de laboratoire.",
+          "access": "Navigateur",
+          "severity": "Majeur",
+          "automation": "Partiel"
+        }
+      ],
+      "en": [
+        {
+          "id": "IMG22",
+          "domain_code": "STABILITE",
+          "domain": "Dimensions and stability",
+          "question": "Do width and height describe the intrinsic ratio of the candidate or reference fallback?",
+          "method": "Compare attributes, decoded dimensions and rendered ratio.",
+          "expected_evidence": "HTML dimensions, natural dimensions and calculated ratio.",
+          "access": "Public",
+          "severity": "Major",
+          "automation": "Yes"
+        },
+        {
+          "id": "IMG23",
+          "domain_code": "STABILITE",
+          "domain": "Dimensions and stability",
+          "question": "Is space reserved before download at every breakpoint?",
+          "method": "Disable cache, throttle the network and inspect the box before decoding.",
+          "expected_evidence": "Pre-load capture and laboratory CLS.",
+          "access": "Browser",
+          "severity": "Major",
+          "automation": "Partial"
+        }
+      ]
+    },
+    "license": "CC BY 4.0"
+  }
+}
