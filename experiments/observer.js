@@ -1,0 +1,19 @@
+import {onCLS} from '../vendor/web-vitals-6.2.2.js';
+const config={windowMs:6000}, image=document.querySelector('#image'),marker=document.querySelector('#marker');
+const supported=!!globalThis.PerformanceObserver?.supportedEntryTypes?.includes('layout-shift');
+const rect=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,top:r.top,bottom:r.bottom}};
+const nodeName=n=>!n?null:n.id?'#'+n.id:n.tagName?.toLowerCase()+ (n.className&&typeof n.className==='string'?'.'+n.className.trim().split(/\s+/).join('.'): '');
+const serialize=e=>({startTime:e.startTime,value:e.value,hadRecentInput:e.hadRecentInput,lastInputTime:e.lastInputTime,sources:[...(e.sources||[])].map(s=>({node:nodeName(s.node),previousRect:JSON.parse(JSON.stringify(s.previousRect)),currentRect:JSON.parse(JSON.stringify(s.currentRect))}))});
+const events=[],metricReports=[],visibility=[{at:0,state:document.visibilityState}],interruptions=[];
+let before=null,loadedAt=null,loadError=null,final=null,po;
+if(supported){po=new PerformanceObserver(list=>events.push(...list.getEntries().map(serialize)));po.observe({type:'layout-shift',buffered:true});onCLS(m=>metricReports.push({at:performance.now(),value:m.value,id:m.id,navigationType:m.navigationType,entries:m.entries.map(e=>e.startTime)}),{reportAllChanges:true});}
+const snapshot=()=>({at:performance.now(),marker:rect(marker),image:rect(image),imageComplete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight,visibility:document.visibilityState,viewport:{width:innerWidth,height:innerHeight,dpr:devicePixelRatio},styles:{width:getComputedStyle(image).width,height:getComputedStyle(image).height,aspectRatio:getComputedStyle(image).aspectRatio,minHeight:getComputedStyle(image).minHeight,objectFit:getComputedStyle(image).objectFit},dimensions:{width:image.getAttribute('width'),height:image.getAttribute('height')}});
+image.addEventListener('load',()=>{loadedAt=performance.now()},{once:true});image.addEventListener('error',()=>{loadError='Image load failed'},{once:true});
+const init=()=>requestAnimationFrame(()=>requestAnimationFrame(()=>{before=snapshot();if(image.complete){if(image.naturalWidth)loadedAt??=performance.getEntriesByName(image.src).at(-1)?.responseEnd??performance.now();else loadError='Image unavailable';}}));
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+document.addEventListener('visibilitychange',()=>visibility.push({at:performance.now(),state:document.visibilityState}));
+for(const type of ['pointerdown','keydown','scroll','resize','pagehide'])addEventListener(type,e=>interruptions.push({type,at:performance.now(),trusted:e.isTrusted}),{capture:true});
+addEventListener('pageshow',e=>{if(e.persisted)interruptions.push({type:'bfcache',at:performance.now()})});
+function finish(){if(final)return final;if(po)events.push(...po.takeRecords().map(serialize));const after=snapshot(),cutoff=config.windowMs;const last=metricReports.filter(m=>m.at<=cutoff).at(-1);final={supported,window:{startMs:0,endMs:cutoff,sampledAt:after.at},before,after,loadedAt,loadError,events:events.filter(e=>e.startTime<=cutoff),metricReports:metricReports.filter(e=>e.at<=cutoff),cls:supported?(last?.value??null):null,metricStatus:!supported?'unavailable':last?'observed':'unavailable',visibility,interruptions,markerDisplacement:before?after.marker.y-before.marker.y:null};po?.disconnect();const output=document.querySelector('#lab-status');if(output)output.textContent=loadError?'Image indisponible':!supported?'Mesure indisponible dans ce navigateur':last?`CLS observé de 0 à 6 s : ${last.value.toFixed(6)} · contexte public sans délai réseau imposé, ou essai local selon le serveur.`:'Mesure indisponible dans cette fenêtre.';return final;}
+window.imageLab={snapshot,finish,get before(){return before},get finished(){return final}};
+setTimeout(finish,Math.max(0,config.windowMs-performance.now()));

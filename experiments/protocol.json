@@ -1,0 +1,42 @@
+{
+  "schema": "edikka-image-layout-protocol-v1",
+  "version": "1.0.0",
+  "written_at": "2026-10-01T07:57:14.752794+00:00",
+  "question": "Late image arrival with or without intrinsic width/height reservation",
+  "scene_language": "fr",
+  "variants": {
+    "a": "No width/height attributes and no CSS reservation",
+    "b": "width=1200 height=800, CSS width:100%; height:auto"
+  },
+  "image_file": "assets/edikka-image.jpg",
+  "image_delay_ms": 2000,
+  "observation_window_ms": 6000,
+  "repetitions": 3,
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "dpr": 1
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "dpr": 1
+    }
+  ],
+  "order": "For each viewport: A1 B1 B2 A2 A3 B3; fresh context and navigation for every trial. Viewports: mobile then desktop.",
+  "cache": "New isolated browser context, service workers blocked, Chromium cache disabled through CDP, local server Cache-Control:no-store",
+  "visibility": "Visible throughout. Hidden/pagehide, input, scrolling, resizing or BFCache restore invalidate a run.",
+  "end_condition": "Exactly the first 6000 ms since navigation are included in layout-shift and metric reports. End sampling may occur slightly later and its timestamp is retained. Image must have loaded within the window, and baseline must precede load.",
+  "metric": "web-vitals 6.2.2 onCLS(reportAllChanges:true), largest session window (<1000 ms gap, <5000 ms duration), hadRecentInput excluded; observation-window CLS, not a final visit score. Unsupported API => null/unavailable.",
+  "validity": "Keep every trial. A shift is not required for validity; unexpected zero remains zero. Reject incomplete image load, wrong dimensions/bytes, no pre-load sample, hidden state, recent user input, missing metric or server delay mismatch.",
+  "interpretation": "The marker displacement is a CSS-pixel geometry difference, not CLS. Shift sources identify moved elements, not their cause. This controlled intervention isolates reservation; no field/SEO/conversion/accessibility-conformance claim.",
+  "public_verification": "GitHub Pages serves normal image responses; publication checks and exploratory delayed insertion are not local delayed-response laboratory trials.",
+  "sources": [
+    "https://web.dev/articles/cls",
+    "https://web.dev/articles/optimize-cls",
+    "https://github.com/GoogleChrome/web-vitals/tree/v6.2.2"
+  ]
+}
