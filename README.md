@@ -6,6 +6,8 @@ Démonstration Edikka **1.0.0**, complément de la **Grille d’audit des images
 - [Instrument dans la bibliothèque](https://www.edikka.com/bibliotheque#instrument-web-image-audit-grid) · [Article source](https://www.edikka.com/insights/developpement-web/optimisation-images-web)
 - [Protocole écrit avant mesure](docs/PROTOCOL.md) · [Reproduire](docs/REPRODUCTION.md) · [Vérifications et limites](docs/TESTING.md)
 
+![Aperçu de la démonstration Edikka](docs/preview.jpg)
+
 ## Deux usages distincts
 
 **Explorer** : le bouton lance deux scènes embarquées de mêmes dimensions. Le `src` de l’image est attribué après **1,5 seconde**, délai pédagogique explicite, même en cache. Le déplacement mesuré est celui du repère, en pixels CSS ; aucun CLS d’iframe n’est attribué à la page parente. Les frames sont recréées à chaque rejeu. Aucun mouvement automatique ni animation en boucle ; une explication statique reste accessible.
@@ -65,3 +67,7 @@ Twelve actual archived trials from 1 October 2026 cover two desktop-emulated vie
 Install: `npm ci`; build: `npm run build`; presentation: `npm start`; separate laboratory: `npm run lab`; new measurements: `npm run measure`; regenerate results: `npm run results`; pre-publication checks: `npm run prepare:publish`. See the [bilingual reproduction guide](docs/REPRODUCTION.md). New data is stored in a distinct dated series without overwriting prior observations. Experimental revisions exclude generated presentation/results, avoiding circular hashes.
 
 Original code is MIT; the Edikka image is separately authorised for this demonstration and excluded from MIT. web-vitals is Apache-2.0; quoted grid control definitions are CC BY 4.0. Rights and hashes are recorded in `assets/provenance.json`.
+
+[Contribuer / Contributing](CONTRIBUTING.md) · [Toutes les démonstrations / All experiments](https://edikkaweb.github.io/)
+
+La détection automatique de GitHub peut afficher « Other » : le fichier LICENSE conserve les exclusions des archives, composants tiers et marques. Le code original reste sous MIT dans le périmètre indiqué. / GitHub may show “Other”; the existing licence scopes and exclusions remain authoritative.
